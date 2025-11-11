@@ -23,6 +23,7 @@ Nessa secção serão apresentadas as imagens geradas com o worflow apresentado 
 ### Imagem gerada
 
 ![](ComfyUI_Text2Image_1.png)
+
 *Figura — baseline (meio do dia, 2 pinguins no longboard).*
 
 ### Comparação Output x Objetivo principal
@@ -47,6 +48,7 @@ A imagem correspondeu bem ao objetivo de ter um pinguim (na prática, dois) surf
 ### Imagem gerada
 
 ![](ComfyUI_Text2Image_2.png)
+
 *Figura — composição simples, **espuma suave**, menos detalhe fino.*
 
 ### Comparação Output x Objetivo principal
@@ -71,13 +73,14 @@ Aqui, a redução dos steps e o CFG mais baixo produziram exatamente o comportam
 ### Imagem gerada
 
 ![](ComfyUI_Text2Image_3.png)
+
 *Figura — dois personagens lado a lado (pinguim + humanoide), look “toy”.*
 
 ### Comparação Output x Objetivo principal
 
 A proposta era obter dois pinguins em plano mais fechado, com alta nitidez. De fato, o aumento de steps e o uso de um sampler voltado a contornos limpos elevaram o nível de detalhe em água, spray e materiais; porém, o conteúdo derivou para um humanoide ao lado do pinguim. Essa deriva é um sintoma clássico de viés do dataset somado a um negativo pouco específico: sem proibições explícitas a “human/person/humanoid”, o modelo “preenche” a cena com o tipo de personagem que conhece bem para o estilo. Em termos qualitativos, o resultado é tecnicamente bom (texturas e bordas estão superiores aos cenários de menos steps), mas semanticamente abaixo do esperado. Como correção, seria recomendável reforçar o sujeito logo no início do prompt (“two penguins…”) e colocar bloqueios negativos de humanos.
 
-## 4 OUTPUT — (direção estilística: cel-shading/HQ)
+## 4º OUTPUT — (direção estilística: cel-shading/HQ)
 
 ### Parâmetros utilizados
 
@@ -95,13 +98,14 @@ A proposta era obter dois pinguins em plano mais fechado, com alta nitidez. De f
 ### Imagem gerada
 
 ![](ComfyUI_Text2Image_4.png)
+
 *Figura — estilo **cel-shading** forte, contornos espessos; sujeito humanoide na crista da onda.*
 
 ### Comparação Output x Objetivo principal
 
 A direção de estilo para cel-shading foi atingida com clareza: cores chapadas, contornos grossos e sensação de ilustração de HQ. Entretanto, o conteúdo novamente cedeu para um surfista humano em vez do pinguim. O conjunto CFG moderado + scheduler normal favoreceu a dominância do estilo sobre o tema, e, sem negativas explícitas a humanos, o checkpoint cartoon “puxou” para sua zona de conforto (personagem humano estilizado). O resultado é ótimo para demonstrar como termos de estilo fortes podem “abafar” o sujeito se o guia não for suficientemente enfático. Se o objetivo fosse manter o pinguim, bastaria subir levemente o CFG, mover os tokens de estilo para o final do prompt e incluir negativas de humano.
 
-## 5 OUTPUT — (composição ampla, pôr do sol; guia forte + denoise parcial)
+## 5º OUTPUT — (composição ampla, pôr do sol; guia forte + denoise parcial)
 
 ### Parâmetros utilizados
 
@@ -119,6 +123,7 @@ A direção de estilo para cel-shading foi atingida com clareza: cores chapadas,
 ### Imagem gerada
 
 ![](ComfyUI_Text2Image_5.png)
+
 *Figura — pôr do sol, paleta quente, pinguim de roupa de neoprene; gradientes suaves.*
 
 ### Comparação Output x Objetivo principal
