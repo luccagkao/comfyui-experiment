@@ -180,8 +180,9 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Capítulos:
-      - Dados: ./exercicios/dados/dados.ipynb
-      - Perceptron: ./exercicios/perceptron/perceptron.ipynb
-      - MPL: ./exercicios/mpl/mlp.ipynb
-      - VAE: ./exercicios/vae/vae.ipynb
+  - Implementação:
+    - Text2Image: ./implementacao/text2image.md
+    - Image2Text: ./implementacao/image2text.md
+  - Resultados:
+    - Text2Image: ./resultados/text2image.md
+    - Image2Text: ./resultados/image2text.md
