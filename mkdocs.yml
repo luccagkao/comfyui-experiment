@@ -182,7 +182,7 @@ nav:
   - Home: index.md
   - Implementação:
     - Text2Image: ./implementacao/text2image.md
-    - Image2Text: ./implementacao/image2text.md
+    - Image2Audio: ./implementacao/image2audio.md
   - Resultados:
     - Text2Image: ./resultados/text2image.md
-    - Image2Text: ./resultados/image2text.md
+    - Image2Audio: ./resultados/image2audio.md
