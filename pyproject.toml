@@ -3,17 +3,12 @@ name = "redes-neurais"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
-    "ipykernel>=6.30.1",
     "markdown-exec>=1.11.0",
-    "matplotlib>=3.10.5",
     "mkdocs-jupyter>=0.25.1",
     "mkdocs-material>=9.6.18",
-    "numpy>=2.3.2",
-    "pandas>=2.3.2",
     "pymdown-extensions>=10.16.1",
-    "scikit-learn>=1.7.1",
     
     # núcleo
     "mkdocs>=1.6", # gerador estático do site
@@ -36,7 +31,6 @@ dependencies = [
     "termynal>=0.11", # terminais animados (plugin termynal)
     "mkdocs-git-revision-date-localized-plugin>=1.4",
     "mkdocs-minify-plugin>=0.8",
-    "tensorflow>=2.20.0",
 ]
 
 [project.optional-dependencies]
