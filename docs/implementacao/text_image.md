@@ -63,11 +63,7 @@ Na geração, só usamos a parte reversa, partindo do ruído e repetindo o proce
 
 O condicionamento textual atua via **Classifier-Free Guidance (CFG)**. Em termos simples, o modelo faz duas previsões de ruído: uma **sem** texto (previsão *unconditional*) e outra **com** texto (previsão *conditional*). Elas são combinadas por um fator de guia (s) (o seu **cfg**):
 
-$$
-[
-\hat{\epsilon} ;=; \hat{\epsilon}*{\text{uncond}} ;+; s,\big(\hat{\epsilon}*{\text{cond}} - \hat{\epsilon}_{\text{uncond}}\big).
-]
-$$
+$$\hat{\epsilon} = \hat{\epsilon}*{\text{unconditional}} + s,\big(\hat{\epsilon}*{\text{conditional}} - \hat{\epsilon}_{\text{unconditional}}\big)$$
 
 Quando (s) é baixo, a imagem pode ficar bonita, porém pouco fiel ao prompt. Quando é alto, segue fielmente o texto, mas pode introduzir saturação, artificiais ou *banding*. Os **prompts negativo e positivo** entram exatamente aqui, puxando a previsão condicional para aproximar o que você descreveu e “afastar” o que você rejeitou.
 
