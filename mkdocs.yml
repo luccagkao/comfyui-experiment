@@ -128,8 +128,8 @@ extra_css:
 nav:
   - Home: index.md
   - Implementação:
-    - Text2Image: implementacao/text_image.md
-    - Text2Audio: implementacao/text_audio.md
+    - Text2Image: ./implementacao/text_image.md
+    - Text2Audio: ./implementacao/text_audio.md
   - Resultados:
-    - Text2Image: resultados/text_to_image.md
-    - Text2Audio: resultados/text_to_audio.md
+    - Text2Image: ./resultados/text_to_image.md
+    - Text2Audio: ./resultados/text_to_audio.md
