@@ -98,7 +98,7 @@ plugins:
       enable_creation_date: true
   - git-authors
   - git-committers:
-      repository: luccagkao/luccagkao.github.com
+      repository: luccagkao/comfyui-experiment
       branch: main
   - search
   - badges
